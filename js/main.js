@@ -22,7 +22,7 @@ const resetBtn = document.querySelector("#reset-button");
 // Aqui se guarda el porcentaje del TIP, bill y people
 let tip = 0;
 let bill = 0;
-let people = 1;
+let people = 0;
 
 
 /*--------------------------- FUNCIONES PARA LOS EVENTOS ----------------------------*/
@@ -70,7 +70,7 @@ function runProgram(button) {
   // Aqui capturamos los valores del usuario, y si alguno está vacio, lo dejamos en cero por defecto, para evitar errores en nuestro programa
   tip = parseFloat(button.value) || tip; // No Borrar
   bill = parseFloat(billInput.value) || 0; // No Borrar
-  people = parseFloat(peopleInput.value) || 1; // No Borrar
+  people = parseFloat(peopleInput.value) || 0; // No Borrar
 
   tipAmountInput.innerHTML = calcularTip(bill, tip, people);
   totalInput.innerHTML = calcularTotal(bill, tip, people);
@@ -87,16 +87,4 @@ function runProgram(button) {
 // Aqui se ejecuta el botón reset, si bien es cierto ya está por funcionar, mira la funcion
 // reset, aun no está recibiendo los parametros!! dale los parametros adecuados que debe reiniciar
 // para que trabaje de manera adecuada. por ejemplo, los inputs
-resetBtn.addEventListener("click", () => {
-
-  tip = 0;
-  bill = 0;
-  people = 1;
-
-  billInput.value = "0";
-  peopleInput.value = "1";
-  customPercentageBtn.value = "";
-
-  tipAmountInput.textContent = "0.00";
-  totalInput.textContent = "0.00";
-});
+resetBtn.addEventListener("click", () => reset())
