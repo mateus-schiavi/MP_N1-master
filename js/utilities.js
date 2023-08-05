@@ -5,11 +5,7 @@
 export function reset(billInput, customPercentageBtn, peopleInput) {
     billInput.value = "0";
     peopleInput.value = "1";
-
-
-    customPercentageBtn.forEach(button => {
-        button.value = "";
-    });
+    customPercentageBtn.value = "";
 }
 
 /**

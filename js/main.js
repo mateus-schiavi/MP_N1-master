@@ -87,4 +87,4 @@ function runProgram(button) {
 // Aqui se ejecuta el botón reset, si bien es cierto ya está por funcionar, mira la funcion
 // reset, aun no está recibiendo los parametros!! dale los parametros adecuados que debe reiniciar
 // para que trabaje de manera adecuada. por ejemplo, los inputs
-resetBtn.addEventListener("click", () => reset(billInput, customPercentageBtn))
+resetBtn.addEventListener("click", () => reset(billInput, customPercentageBtn, peopleInput))
