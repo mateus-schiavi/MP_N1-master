@@ -77,6 +77,7 @@ function runProgram(button) {
   customPercentageBtn.innerHTML = calcularTip(bill, tip, people);
   calcularTodo.innerHTML = calcularTodo(bill, tip, people);
   esCero.innerHTML = esCero(input);
+  resetBtn.innerHTML = reset(bill, tip, people);
   claseActivo.innerHTML = claseActivo(input);
 
 }
