@@ -7,6 +7,9 @@ export function reset(billInput, customPercentageBtn, peopleInput) {
     peopleInput.value = "1";
     customPercentageBtn.value = "";
 
+    document.querySelector("#total").innerHTML = "0";
+    document.querySelector("#tipAmountInput").innerHTML = "0";
+
 }
 
 /**
